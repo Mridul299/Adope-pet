@@ -1,0 +1,7 @@
+.active{
+    background-color: rgba(14, 122, 129, 0.1);
+    border: 2px solid green;
+    color: black;
+    font-weight: bold;
+    
+}

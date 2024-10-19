@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-6</title> 
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+
+        .font-lato{
+            font-family: "Lato", sans-serif;
+        }
+        .font-inter{
+            font-family: "Inter", sans-serif;
+ 
+        }
+        #spineer{
+            display:none;
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(0,0,0,0.1);
+            border-top: 4px solid #000;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body class="font-lato">
+    <header>
+       <nav class="w-10/12 mx-auto flex justify-between lg:py-14 py-7 items-center">
+        <div class="flex items-center lg:gap-3 gap-1">
+            <img src="./assets/logo.webp" class="lg:w-7 w-4 lg:h-7 h-4" alt="">
+            <h1 class="font-black lg:text-4xl text-2xl">Peddy</h1>
+        </div>
+        <div class="flex items-center lg:gap-8 md:gap-6 gap-4 text-slate-600">
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Contact</a>
+        </div>
+        <a href="#">
+            <div class="border rounded-full lg:w-14 w-7 lg:h-14 h-7 items-center flex justify-center">    
+                <img src="./assets/user.png.png" class="lg:w-6 w-4 lg:h-6 h-4 " alt="">            
+            </div>
+        </a>
+       
+       </nav>
+    </header>
+    <main class="w-10/12 mx-auto ">
+        <!-- hero section -->
+        <section>
+            <div class="text-center ">
+                <h4 class=" font-bold lg:text-2xl text-base text-slate-500">Bringing Families Together ❤️‍🔥 </h4>
+                <h1 class="font-black lg:text-7xl text-4xl py-6 lg:w-[752px] mx-auto">Your Path to Adoption Starts Here</h1>
+                <p class="text-base mx-auto lg:w-[752px]">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+                <a href="#button-container"><button class="btn btn-active btn-accent text-white lg:mt-8 mt-5">View More</button></a> 
+            </div>
+            <div class="lg:w-[802px] mx-auto mt-12">
+                <img src="./assets/pet.webp" class="object-cover " alt="">
+            </div>
+        </section>
+        <!-- button section -->
+        <section class="" id="button-container">
+            <div class="text-center">
+                <h1 class="lg:w-[433px] mx-auto font-black lg:text-[40px]">Adopt  Your  Best Friend</h1>
+                <p class="lg:w-[636px] mx-auto lg:text-base text-xs text-slate-500 lg:mt-6 mt-3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            </div>
+              <!-- button -->
+            <div class="mt-12 mb-8 flex justify-between" id="cetegory-container">
+            
+            </div>
+        </section>
+        <!-- sort section -->
+        <section class="my-8">
+            <div class="flex justify-between">
+                <h1 class="font-black lg:text-2xl">Best Deal For you</h1>
+                <button class="btn btn-active btn-accent text-white ">Sort by Price</button>
+            </div>
+        </section>
+        <!-- spineer -->
+         <div id="spineer"></div>
+        <!-- card section -->
+         <section class=" flex lg:justify-between flex-col lg:flex-row gap-2">
+            <!-- card div -->
+            <div class=" max-w-3xl grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 lg:h-full" id="cardContainer"></div>
+         <!-- image section -->
+            <div id="imageContainer" class=" lg:max-w-80 w-full grid grid-cols-2 lg:h-full p-2 gap-4 ">
+                
+            </div>
+         
+         </section>
+    </main>
+
+
+
+    <!-- Open the modal using ID.showModal() method -->
+        <button class="showModalData" class="hidden" onclick="customModal.showModal()"></button>
+        <dialog id="customModal" class="modal modal-middle ">
+        <div class="modal-box">
+            <div id="modalContainer">
+
+            </div>
+            
+        </div>
+        </dialog>
+        <!-- 2nd modal -->
+
+        <button class="showModalData-2" class="hidden" onclick="customModal2.showModal()"></button>
+        <dialog id="customModal2" class="modal modal-middle ">
+        <div class="modal-box2">
+            <div id="modalContainer2" class="">
+                <div class="modal-content">
+                    <p>Modal will close in <span id="countdown">3</span> seconds.</p>
+                </div>
+
+            </div>
+            
+        </div>
+        </dialog>
+
+
+    <footer class="w-full bg-black h-full">
+        <section class="lg:flex justify-between w-10/12 mx-auto lg:py-[100px] py-10">
+            <!-- box-1 -->
+            <div class="w-[308px]">
+                <div class="flex gap-3 w-[131px] lg:mb-6 mb-4">
+                    <img src="./assets/logo.webp" class="lg:w-7 lg:" alt="">
+                    <h1 class="font-black lg:text-3xl text-white">Peddy</h1>
+                </div>
+                <p class="text-slate-400">Location: av. Washington 165, NY CA </p>
+                <p class="text-slate-400 my-2">54003</p>
+                <p class="text-slate-400">Phone: +31 85 964 47 25</p>
+                <p class="text-slate-400 my-2">Email: info@yourdomain.com</p>
+                <div class="flex gap-4 items-center">
+                    <a href="#"><img class="w-9 h-9" src="./assets/fb.png.png" alt=""></a>
+                    <a href="#"><img class="bg-white w-[30px] h-[30px]" src="./assets/x.png.png" alt=""></a>
+                    <a href="#"><img class="w-[45px] h-[30px]" src="./assets/youtube.png.png" alt=""></a>
+                    <a href="#"><img class="w-[32px] h-[32px]" src="./assets/insta.png.png" alt=""></a>
+                </div>
+            </div>
+            <!-- box-2 -->
+            <div class="flex flex-col lg:my-0 my-5">
+                <h1 class="lg:text-xl font-bold font-inter text-white lg:mb-8 mb-4">Useful Links</h1>
+                <a href="#" class="text-slate-400">Home</a>
+                <a href="#" class="text-slate-400">About Us</a>
+                <a href="#" class="text-slate-400">Animals</a>
+                <a href="#" class="text-slate-400">Foundation</a>
+                <a href="#" class="text-slate-400">Contact</a>
+            </div>
+            <!-- box-3 -->
+            <div class="flex flex-col">
+                <h1 class="font-bold text-xl text-white lg:mb-8 mb-4">Drop a Message</h1>
+                <input type="text" name="" placeholder="Enter your email" class="p-4 rounded-xl mb-4 bg-slate-900 text-white" id="">
+                <button class="btn bg-[#0E7A81] border-none text-white">Subscribe</button>
+            </div>
+        </section>
+    </footer>
+
+    <script src="./script/index.js"></script>
+</body>
+</html>
